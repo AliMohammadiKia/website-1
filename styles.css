@@ -252,6 +252,37 @@ main {
   cursor: pointer;
 }
 
+footer {
+  padding: 4rem 8rem 2rem 8rem;
+  text-align: center;
+}
+footer .social__media {
+  width: 20%;
+  margin: 1.5rem auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer :first-child h2 {
+  margin-bottom: 0.5rem;
+}
+footer .social__media i {
+  color: #333;
+  font-size: 1.3rem;
+  transition: all 0.3s;
+}
+footer .social__media i:hover {
+  cursor: pointer;
+  color: black;
+}
+footer .author {
+  margin-top: 1rem;
+  font-weight: 300;
+  font-size: 1rem;
+}
+footer .author .heart {
+  color: red;
+}
+
 /* media queries */
 @media only screen and (max-width: 500px) {
   nav {
