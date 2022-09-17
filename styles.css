@@ -353,4 +353,21 @@ footer .author .heart {
   .contacts {
     display: none;
   }
+  footer {
+    padding: 0 2rem 2rem 2rem;
+  }
+  footer :first-child h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  footer :first-child p {
+    text-align: left;
+    font-size: 0.75;
+  }
+  footer .social__media {
+    width: 50%;
+  }
+  footer .author {
+    font-size: 0.8rem;
+  }
 }
