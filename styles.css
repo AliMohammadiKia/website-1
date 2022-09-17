@@ -232,6 +232,7 @@ main {
     ),
     url("https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/CSFCMSEN/4jwkequnrueuc3zsuky8jw.jpg");
   background-position: center;
+  background-attachment: fixed;
   background-size: cover;
   border-radius: 0.5rem;
   display: flex;
@@ -356,11 +357,19 @@ footer .author .heart {
   outline: none;
   padding: 1rem 2rem;
   font-size: 1rem;
+  border: 2px solid transparent;
+  border-radius: 0.25rem;
   color: #333;
+  transition: all 0.3s;
 }
 .blog__comment form input::placeholder,
 .blog__comment form textarea::placeholder {
   color: #95a5a6;
+}
+.blog__comment form input:focus,
+.blog__comment form textarea:focus {
+  border: 2px solid #3498db;
+  background-color: white;
 }
 .blog__comment form textarea {
   resize: vertical;
