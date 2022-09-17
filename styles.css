@@ -21,18 +21,29 @@ a {
 }
 
 header {
-  min-height: 100vh;
   background-color: #333;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+header.home {
+  min-height: 100vh;
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.5) 0%,
       rgba(0, 0, 0, 0.5) 100%
     ),
     url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_180843224_20001260200092802_126854.jpg");
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  position: relative;
+}
+header.courses {
+  min-height: 60vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.75) 100%
+    ),
+    url("https://www.learndash.com/wp-content/uploads/201215-6-Elements-Every-Online-Course-Needs-to-Have.jpg");
 }
 
 nav {
