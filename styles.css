@@ -242,7 +242,7 @@ main {
   gap: 2rem;
 }
 .contacts p {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 .contacts button {
@@ -382,6 +382,46 @@ footer .author .heart {
   cursor: pointer;
 }
 
+.about__company {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.company__description {
+  flex: 1.5;
+}
+.company__description h2 {
+  font-weight: 500;
+  margin: 1rem;
+}
+.company__description p {
+  text-align: justify;
+  margin: 1rem;
+}
+.company__description button {
+  margin: 0 1rem;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.25rem;
+  background-color: #3498db;
+  color: white;
+  transition: all 0.3s;
+}
+.company__description button:hover {
+  background-color: #2980b9;
+  cursor: pointer;
+}
+.company__image {
+  flex: 1;
+}
+.company__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
 /* media queries */
 @media only screen and (max-width: 500px) {
   nav {
@@ -515,6 +555,26 @@ footer .author .heart {
   .blog__comment form button {
     width: 40%;
     padding: 0.75rem 0;
+    font-size: 0.8rem;
+  }
+
+  .about__company {
+    flex-direction: column-reverse;
+  }
+  .about__company .company__image {
+    padding: 0 1rem;
+  }
+  .about__company .company__description h2 {
+    font-size: 1.2rem;
+  }
+  .about__company .company__description p {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.7;
+    padding: 1rem 0;
+    font-weight: 300;
+  }
+  .about__company .company__description button {
     font-size: 0.8rem;
   }
 }
