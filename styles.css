@@ -21,7 +21,14 @@ a {
 }
 
 header {
+  min-height: 60vh;
   background-color: #333;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.75) 100%
+    ),
+    url("https://www.learndash.com/wp-content/uploads/201215-6-Elements-Every-Online-Course-Needs-to-Have.jpg");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -35,15 +42,6 @@ header.home {
       rgba(0, 0, 0, 0.5) 100%
     ),
     url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_180843224_20001260200092802_126854.jpg");
-}
-header.courses {
-  min-height: 60vh;
-  background-image: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.75) 0%,
-      rgba(0, 0, 0, 0.75) 100%
-    ),
-    url("https://www.learndash.com/wp-content/uploads/201215-6-Elements-Every-Online-Course-Needs-to-Have.jpg");
 }
 
 nav {
@@ -122,7 +120,7 @@ nav ul li a.active {
 }
 
 main {
-  padding: 4rem 0;
+  padding: 4rem 8rem;
 }
 
 .grouping__education {
@@ -294,6 +292,96 @@ footer .author .heart {
   color: red;
 }
 
+/* blog page */
+.blog__description {
+  display: flex;
+  gap: 2rem;
+}
+.blog__program {
+  flex: 2;
+  padding: 0 4rem;
+}
+.blog__program img {
+  width: 100%;
+  height: 450px;
+  border-radius: 0.25rem;
+}
+.blog__program h2 {
+  margin: 1.5rem 0 2.5rem 0;
+  font-weight: 500;
+}
+.blog__program p {
+  margin: 1.75rem 0;
+  font-weight: 300;
+}
+.blog__category {
+  flex: 1;
+}
+.blog__category h2 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  background-color: #3498db;
+  text-align: center;
+  color: white;
+  padding: 0.5rem 0;
+  border-radius: 0.25rem;
+}
+.blog__category .items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.blog__category .items section {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+}
+
+.blog__comment {
+  margin-top: 6rem;
+}
+.blog__comment form {
+  border: 1px solid lightgray;
+  border-radius: 0.25rem;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.blog__comment form input,
+.blog__comment form textarea {
+  background-color: #ecf0f1;
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #333;
+}
+.blog__comment form input::placeholder,
+.blog__comment form textarea::placeholder {
+  color: #95a5a6;
+}
+.blog__comment form textarea {
+  resize: vertical;
+  width: 100%;
+}
+.blog__comment form button {
+  width: 20%;
+  padding: 1rem 0;
+  border: none;
+  outline: none;
+  background-color: #3498db;
+  color: white;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s;
+}
+.blog__comment form button:hover {
+  background-color: #2980b9;
+  cursor: pointer;
+}
+
 /* media queries */
 @media only screen and (max-width: 500px) {
   nav {
@@ -319,6 +407,9 @@ footer .author .heart {
     padding: 0.75rem 2rem;
     font-size: 1rem;
     margin-top: 1rem;
+  }
+  main {
+    padding: 4rem 0;
   }
   .grouping__education h2 {
     font-size: 1.25rem;
@@ -379,6 +470,51 @@ footer .author .heart {
     width: 50%;
   }
   footer .author {
+    font-size: 0.8rem;
+  }
+  .blog__description {
+    flex-direction: column-reverse;
+    gap: 4rem;
+  }
+  .blog__program {
+    padding: 0 1rem;
+  }
+  .blog__program img {
+    width: 100%;
+    height: auto;
+  }
+  .blog__program h2 {
+    font-size: 1.2rem;
+  }
+  .blog__program p {
+    font-size: 1rem;
+    margin: 1.5rem 0;
+  }
+  .blog__category {
+    padding: 0 1rem;
+  }
+  .blog__category h2 {
+    font-size: 1rem;
+  }
+  .blog__category p {
+    font-size: 0.8rem;
+  }
+  .blog__comment form {
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+  .blog__comment form h2 {
+    font-size: 1rem;
+  }
+  .blog__comment form input,
+  .blog__comment form textarea {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
+    color: #333;
+  }
+  .blog__comment form button {
+    width: 40%;
+    padding: 0.75rem 0;
     font-size: 0.8rem;
   }
 }
